@@ -14,7 +14,7 @@ You can install via composer
 
 ### General Usage;
 
-```
+```php
 use Cpanel\Client;
 
 $client = new Client($domain);
@@ -23,7 +23,7 @@ $client->authenticateByUsernamePassword($username, $password);
 
 ### There are different authentication methods;
 
-```
+```php
 $client->authenticateByAccessHashForWhm($accessHash);
 $client->authenticateByApiTokenForWhm($username, $apitoken);
 $client->authenticateByApiTokenForCpanel($username, $apitoken);
@@ -32,7 +32,7 @@ $client->authenticateByUsernamePassword($username, $password);
 
 ### UApi Usage;
 
-```
+```php
 $ftp      = new Ftp($client);
 $ftpResponse = $ftp->getFtpAccounts();
 
@@ -50,7 +50,7 @@ There are 5 different custom exceptions.
  - ResponseException
 
 It can be used as: 
-```
+```php
 use Cpanel\Exception\ConnectionException;
 use Cpanel\Exception\InvalidArgumentException;
 use Cpanel\Exception\MissingParameterException;
@@ -71,7 +71,7 @@ try {
 
 If we want to catch all errors with one exception, we can use it like this.
 
-```
+```php
 use Cpanel\Exception\CpanelErrorException;
 
 try {
@@ -82,7 +82,7 @@ try {
 ```
 
 ## Example Code
-```
+```php
 use Cpanel\Client;
 use Cpanel\Exception\ConnectionException;
 use Cpanel\Exception\InvalidArgumentException;
