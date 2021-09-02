@@ -54,6 +54,18 @@ abstract class Uapi implements RequestInterface
     }
 
     /**
+     * Set End Point For Request
+     *
+     * @param string $endpoint
+     * @return self
+     */
+    public function setEndPoint($endpoint): self
+    {
+        $this->endpoint .= $endpoint;
+        return $this;
+    }
+
+    /**
      * Get End Point For Request
      *
      * @return string
@@ -61,6 +73,18 @@ abstract class Uapi implements RequestInterface
     public function getEndPoint(): string
     {
         return $this->endpoint;
+    }
+
+    /**
+     * Set Parameters For Request
+     *
+     * @param array $parameters
+     * @return self
+     */
+    public function setParameters(array $parameters): self
+    {
+        $this->parameters = $parameters;
+        return $this;
     }
 
     /**
